@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="cv.css">
+</head>
+<body>
+    <!-- Top Info Section -->
+<section class="bg-navy-gradient text-white p-6 font-sans relative">
+  <div class="max-w-6xl mx-auto">
+    <h1 class="text-3xl ml-4  font-serif font-semibold text-white">Muhammad Ammar</h1>
+    <p class="text-sm text-cyan-300 mt-1 ml-4">
+      Software Engineering Student
+    </p>
+    <p class="italic text-sm text-gray-200 mt-3 ml-4 max-w-3xl">
+      "Striving for innovation – A passionate, driven, and tech-savvy individual with hands-on experience in technology and software development, seeking to contribute meaningfully to cutting-edge projects while driving the success of a forward-thinking company."
+    </p>
+  </div>
+
+  <!-- Menu Button on top-right -->
+  <button 
+    class="navbar-links border-0 md:border d-md-block px-2 py-1 bg-transparent text-white absolute top-6 right-6" 
+    type="button" 
+    data-bs-toggle="offcanvas" 
+    data-bs-target="#offcanvasMenu" 
+    aria-controls="offcanvasMenu"
+    aria-label="Toggle menu"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+  </button>
+</section>
+
+<!-- Offcanvas Menu (Right Side) -->
+<div class="offcanvas offcanvas-end bg-navy-gradient" style="max-height: 100vh;" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+  <div class="offcanvas-header">
+    <h5 style="font-size: 22px;" class="offcanvas-title text-white" id="offcanvasMenuLabel">Menu</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+
+  <!-- Scrollable Offcanvas Body -->
+  <div class="offcanvas-body p-0 flex flex-col" style="height: calc(100vh - 56px);">
+    <div class="flex flex-col h-full text-gray-200">
+      <div class="flex-1 overflow-y-auto">
+        <aside class="w-full" style="font-size: 20px;">
+          <div class="px-0 py-2 flex flex-col">
+            <nav class="px-2 space-y-2">
+
+
+              <a href="#" class="flex items-center text-white p-2 sidenavbar-options">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M3 12l9-9 9 9v8a2 2 0 01-2 2h-4a2 2 0 01-2-2v-4H9v4a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                </svg>
+                <span>Home</span>
+              </a>
+
+              <div x-data="{ open: false }" class="text-sm">
+                <button @click="open = !open" class="w-full flex items-center justify-between p-2 text-white transition focus:outline-none">
+                  <div class="flex items-center">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path d="M20 13V6a2 2 0 00-2-2h-3V2h-6v2H6a2 2 0 00-2 2v7M5 20h14a1 1 0 001-1v-5H4v5a1 1 0 001 1z" />
+                    </svg>
+                    <a href="gamingProlist.html"><span class="sidenavbar-options">Projects</span></a>
+                  </div>
+                  <svg :class="{ 'rotate-180': open }" class="w-4 h-4 text-cyan transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                <div x-show="open" x-transition class="flex flex-col mt-2 ml-10 space-y-2 text-white sidenavbar-suboptions">
+                  <a href="#" class="hover:text-blue-400 transition">Completed</a>
+                  <a href="#" class="py-2 hover:text-blue-400 transition">Ongoing</a>
+                </div>
+              </div>
+
+              <!-- <a href="#" class="flex items-center px-1 py-1 text-white sidenavbar-options">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <span class="px-0">Gaming</span>
+              </a>
+
+              <a href="#" class="flex items-center px-2 py-1 text-white sidenavbar-options">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M18.364 5.636a9 9 0 11-12.728 0M9 9h.01M15 15h.01M9 15h.01M15 9h.01" />
+                </svg>
+                <span class="px-1">About TechNation</span>
+              </a> -->
+
+            </nav>
+          </div>
+        </aside>
+      </div>
+
+      <div class="border-t px-4 py-3 text-sm text-white text-center" style="border-color: #00F0FF;">
+        © 2025 Ammar's Resume. All rights reserved.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Contact Section -->
+<section class="bg-charcoal-gradient text-white text-sm font-sans">
+  <div class="max-w-6xl mx-auto p-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+    <div class="flex items-center space-x-2">
+      <i class="fas fa-envelope text-white"></i>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ammar914356@gmail.com" target="_blank"><span>ammar914356@gmail.com</span></a>
+    </div>
+    <div class="flex items-center space-x-2">
+      <i class="fas fa-phone text-white"></i>
+      <a href="https://wa.me/923011730661?text=Hi%20there!%20I%20found%20your%20site%20interesting." target="_blank"><span>(+92) 301 1730661</span></a>
+    </div>
+    <div class="flex items-center space-x-2">
+      <i class="fas fa-map-marker-alt text-white"></i>
+      <span>Karachi, Pakistan</span>
+    </div>
+    <div class="flex items-center space-x-2">
+      <i class="fab fa-linkedin text-white"></i>
+      <a href="https://www.linkedin.com/in/muhammad-ammar-37ab3b361/" target="_blank"><span>linkedin.com/in/muhammad-ammar-37ab3b361</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto p-4 text-charcoal-dark font-sans space-y-8">
+
+    <div>
+    <h3 class="text-lg font-bold text-teal-800 uppercase mb-2">Education</h3>
+    <div class="grid grid-cols-2 text-sm">
+      <div>
+        <span class="font-semibold text-lg">BSE - Software Engineering</span><br>
+        <span class="text-gray-600 text-lg">Bahria University Karachi</span><br>
+        <span class="text-blue-600 italic">2024 - Onwards</span>
+      </div>
+      <div>
+        <span class="font-semibold text-lg">Intermediate - Pre-Engineering</span><br>
+        <span class="text-gray-600 text-lg">Dehli Govt. College</span><br>
+        <span class="text-blue-600 italic">2022 - 2024</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Technical Skills -->
+  <div>
+    <h3 class="text-lg font-bold text-teal-800 uppercase mb-2">Technical Skills</h3>
+    <div class="flex flex-wrap gap-2">
+      <span class="btn-primary text-sm px-3 py-1 rounded">Negotiation Skills</span>
+    </div>
+  </div>
+
+  <!-- Software Skills -->
+  <div>
+    <h3 class="text-lg font-bold text-teal-800 uppercase mb-2">Software Skills</h3>
+    <div class="flex flex-wrap gap-2">
+      <span class="gaming-btn-primary text-sm px-3 py-1 rounded">Front End Development</span>
+      <span class="gaming-btn-primary text-sm px-3 py-1 rounded">Java</span>
+      <span class="gaming-btn-primary text-sm px-3 py-1 rounded">Python</span>
+      <span class="gaming-btn-primary text-sm px-3 py-1 rounded">C#</span>
+      <span class="gaming-btn-primary text-sm px-3 py-1 rounded">Microsoft 365</span>
+      <span class="gaming-btn-primary text-sm px-3 py-1 rounded">Excel & Power Point</span>
+      <!-- <span class="gaming-btn-primary text-sm px-3 py-1 rounded">Quickbooks</span> -->
+    </div>
+  </div>
+
+  <!-- Soft Skills -->
+  <div>
+    <h3 class="text-lg font-bold text-teal-800 uppercase mb-2">Soft Skills</h3>
+    <div class="flex flex-wrap gap-2">
+      <span class="btn-primary text-sm px-3 py-1 rounded">Effective Communication Skills</span>
+      <span class="btn-primary text-sm px-3 py-1 rounded">Interpersonal Skills</span>
+      <span class="btn-primary text-sm px-3 py-1 rounded">Time Management</span>
+      <span class="btn-primary text-sm px-3 py-1 rounded">Quick Learner</span>
+      <span class="btn-primary text-sm px-3 py-1 rounded">Task Management</span>
+    </div>
+  </div>
+
+  <!-- Preferences -->
+  <div>
+    <h3 class="text-lg font-bold text-teal-800 uppercase mb-2">Preferences</h3>
+    <ul class="list-disc list-inside text-sm space-y-1">
+      <li>Web Development</li>
+      <li>Software Engineering</li>
+      <li>Data Structures & Algorithms</li>
+      <li>Research & Development</li>
+    </ul>
+  </div>
+
+  <!-- Languages -->
+  <div>
+    <h3 class="text-lg font-bold text-teal-800 uppercase mb-2">Languages</h3>
+    <div class="grid grid-cols-3 text-sm">
+      <div>
+        <span class="font-semibold">English</span><br>
+        <span class="text-gray-600 italic">Full Professional Proficiency</span>
+      </div>
+      <div>
+        <span class="font-semibold">Urdu</span><br>
+        <span class="text-gray-600 italic">Native or Bilingual Proficiency</span>
+      </div>
+      <div>
+        <span class="font-semibold">German</span><br>
+        <span class="text-gray-600 italic">Basic Proficiency</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+</body>
+  <script src="https://kit.fontawesome.com/f4157f3a9f.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<script src="https://unpkg.com/heroicons@2.0.16/dist/24/outline.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</html>
